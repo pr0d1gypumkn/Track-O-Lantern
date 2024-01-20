@@ -6,7 +6,7 @@ const Notifications = ({ visible, setVisible }) => {
     if (visible) {
       const timer = setTimeout(() => {
         setVisible(false);
-      }, 2000);
+      }, 1000);
       return () => clearTimeout(timer);
     }
   }, [visible, setVisible]);

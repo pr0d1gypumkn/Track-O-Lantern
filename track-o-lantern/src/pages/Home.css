@@ -26,8 +26,44 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('../../public/assets/background.jpeg');
+    background-image: url('../assets/background.jpeg');
     background-size: cover;
     z-index: -1;
 
+    height: 100vh;
+    background-image: url("../assets/background.jpeg");
+    background-size: cover;
+    font-family: "Open Sans", sans-serif;
+}
+
+.welcome {
+    position: absolute;
+    top: 5dvh;
+    left: 5dvw;
+}
+
+.Themes {
+    position: absolute;
+    bottom: 5dvh;
+    right: 5dvw;
+    align-items: center;
+
+}
+
+.Themes img {
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.Themes h1 {
+    position: relative;
+    top: -30px;
+    color: #000;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }

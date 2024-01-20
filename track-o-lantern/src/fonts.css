@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'DownHere';
+    src: local('JustMeAgainDownHere-Regular'), url(../public/fonts/JustMeAgainDownHere-Regular.ttf) format('ttf');
+    /* adapted from https://stackoverflow.com/questions/41676054/how-to-add-fonts-to-create-react-app-based-projects */
+  }
+
+.welcome {
+    font-family: 'DownHere';
+    src: local('JustMeAgainDownHere-Regular'), url(../public/fonts/JustMeAgainDownHere-Regular.ttf) format('ttf');
+    font-size: 3em;
+
+    color: #000;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    /* border-image: 
+        linear-gradient(
+        to bottom, 
+        red, 
+        rgba(0, 0, 0, 0)
+        ) 1 100%; */
+    margin: 0;
+    padding: 0;
+}

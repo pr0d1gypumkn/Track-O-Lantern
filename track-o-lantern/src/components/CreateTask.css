@@ -1,6 +1,6 @@
 button {
     display: block;
-    background-image: url('../../public/assets/seed.png');
+    background-image: url('../assets/seed.png');
     background-size: 100%;
     width: 150px;
     height: 150px;

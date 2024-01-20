@@ -1,0 +1,81 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.taskList {
+    width: 80%;
+    height: fit-content;
+    margin: 0;
+    padding-right: 10px;
+}
+  
+.slide {
+    margin: 0;
+    transform: scale(0.6);
+    transition: transform 300ms;
+    opacity: 0.7;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 30px;
+    min-height: 250px;
+    background-color: rgba(235, 225, 196, 0.6);
+}
+
+.activeSlide {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.arrow {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow svg {
+    transition: color 300ms;
+}
+
+.arrow svg:hover {
+    color: #68edff;
+}
+
+.next {
+    right: 0%;
+    top: 50%;
+}
+
+.prev {
+    left: 0%;
+    top: 50%;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #343434;
+}
+
+.cardTitle {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.cardComplete {
+    position: absolute;
+    font-size: 1.2em;
+    bottom: 30px;
+}
+
+.cardDetails {
+    text-align: left;
+    max-width: 80%;
+}
+
+.cardDetails > div {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}

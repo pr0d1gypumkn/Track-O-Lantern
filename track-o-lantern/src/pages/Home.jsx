@@ -103,7 +103,7 @@ const Home = () => {
                         <h1>Themes</h1>
                     </div>
                 </div>
-                <CreateTask />
+                <CreateTask className="plant-seed"/>
             </div>
 
 

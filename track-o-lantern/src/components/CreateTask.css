@@ -12,4 +12,14 @@ button {
     cursor: pointer;
     padding-top: 110px;
     text-align: center;
+    font-family: "Open Sans", sans-serif;
+    transition: padding-top 0.3s, width 0.3s, height 0.3s, font-size 0.3s, color 0.3s;
+}
+
+button:hover {
+    color: #fff;
+    padding-top: 130px;
+    font-size: 1.05em;
+    width: 175px;
+    height: 175px;
 }

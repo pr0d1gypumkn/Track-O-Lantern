@@ -75,6 +75,7 @@ const TaskList = () => {
                         task={task}
                     />
                 ))}
+                {taskListSorted.length == 1 && <div />}
                 <div />
                 <div />
             </Slider>

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { TaskContext } from '../pages/Home';
+import { Checkbox } from '@mui/material';
 
 const TaskCard = (props) => {
     const { taskListData, setTaskListData } = useContext(TaskContext);
@@ -29,8 +30,8 @@ const TaskCard = (props) => {
             </div>
             <div className="cardComplete">
                 completed: 
-                <input
-                    type="checkbox"
+                <Checkbox
+                    color="success"
                     checked={task.completed}
                     disabled={idx !== activeIndex}
                     onClick={() => handleCompleteClick(idx)}

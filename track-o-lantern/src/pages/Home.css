@@ -15,7 +15,8 @@
     backdrop-filter: blur(8px);
     height: 100vh;
     width: 100vw;
-
+    min-height: 40dvh;
+    padding-bottom: 20dvh;
 
 }
 

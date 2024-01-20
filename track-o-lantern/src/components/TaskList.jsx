@@ -24,10 +24,16 @@ const TaskList = () => {
     };
     
     useEffect(() => {
-        if (taskListData) {
-            const res = taskListData.sort(customSort);
-            setTaskListSorted(res);
+        const sortTaskList = async() => {
+            const sleep = ms => new Promise(r => setTimeout(r, ms));
+            await sleep(1000);
+            if (taskListData) {
+                const res = taskListData.sort(customSort);
+                setTaskListSorted(res);
+            }
         }
+        sortTaskList();
+        
     }, [taskListData]);
 
     const NextArrow = ({ onClick }) => {

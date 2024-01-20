@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { TaskContext } from '../pages/Home';
 
+
+
 const NewTask = ({ history }) => {
     const { taskListData, setTaskListData } = useContext(TaskContext);
 
@@ -26,11 +28,10 @@ const NewTask = ({ history }) => {
         // You can also save the task data to a backend server here if needed.
 
         // Redirect back to the Home page after adding the task.
-        history.push('/');
     };
 
     return (
-        <div>
+        <div className="background">
             <h2>New Task</h2>
             <form>
                 <label>Title:</label>

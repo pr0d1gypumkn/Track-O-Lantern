@@ -61,8 +61,9 @@ const TaskList = () => {
     return (
         <div className="taskList">
             <Slider {...settings} ref={sliderRef}>
-                {taskListSorted.map((task, idx) => (
+                {taskListSorted.map((task, idx, id) => (
                     <TaskCard
+                        key={id}
                         idx={idx}
                         activeIndex={activeIndex}
                         task={task}

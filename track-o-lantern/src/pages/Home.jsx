@@ -4,7 +4,6 @@ import TaskList from '../components/TaskList';
 import CreateTask from '../components/CreateTask';
 import './Home.css';
 import '../fonts.css'
-import { useNavigate } from "react-router-dom";
 
 import base from '../assets/base_pumpkin.png';
 import among_us from '../assets/among_us_pumpkin.png';
@@ -68,6 +67,13 @@ const Home = () => {
              state: {}
          });
     }
+
+    const newTask = () => {
+        navigate(`/new-task`, {
+            state: {}
+        });
+    }
+
     return (
         <div className='background'>
             <div className='pageContainer'>
@@ -77,8 +83,6 @@ const Home = () => {
                         value={{ taskListData, setTaskListData }}
                     >
                         <TaskList />
-                       {/* Temporary button for testing */}
-                  <button onClick={navigate('/new-task',{})}>Test NewTask Page</button>
                     </TaskContext.Provider>
                     
                     <div className="Themes" onClick={goToThemes}>

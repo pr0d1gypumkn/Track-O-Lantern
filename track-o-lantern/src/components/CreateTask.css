@@ -1,28 +1,26 @@
-button {
+.createTaskButton {
     display: block;
     background-image: url('../assets/seed.png');
     background-size: 100%;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 200px;
     align-self: center;
-    margin-top: 50px;
+    margin-top: 30px;
     border: none;
     padding: 0;
     background-color: transparent;
     cursor: pointer;
-    /* padding-top: 110px; */
     text-align: center;
     font-family: "Open Sans", sans-serif;
     font-size: 0px;
     transition: padding-top 0.3s, width 0.3s, height 0.3s, font-size 0.3s, color 0.3s;
 }
 
-button:hover {
+.createTaskButton:hover {
     color: #fff;
     padding-top: 130px;
-    height:350px;
+    height: 250px;
     background-repeat: no-repeat;
-    padding-bottom: 200px;
     font-size: 1.05em;
     width: 175px;
     height: 175px;

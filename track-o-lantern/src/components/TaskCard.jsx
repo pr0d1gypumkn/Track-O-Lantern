@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { TaskContext } from '../pages/Home';
+import { TaskContext } from '../App';
 import { Checkbox } from '@mui/material';
 
 const TaskCard = (props) => {

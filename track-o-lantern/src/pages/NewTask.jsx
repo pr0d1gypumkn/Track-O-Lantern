@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { TaskContext } from '../App';
 import TaskList from '../components/TaskList';
 import CreateTask from '../components/CreateTask';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -25,8 +26,11 @@ const NewTask = () => {
         }));
     };
 
+    const navigate = useNavigate()
     const addTask = () => {
-        // setTaskListData((prevTaskList) => [...prevTaskList, newTask]);
+        setTaskListData((prevTaskList) => [...prevTaskList, newTask]);
+
+        navigate('/');
         // You can also save the task data to a backend server here if needed.
 
         // Redirect back to the Home page after adding the task.

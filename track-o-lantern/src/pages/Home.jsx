@@ -1,9 +1,19 @@
 import React, { useState, createContext } from 'react';
 import TaskList from '../components/TaskList';
 import './Home.css';
+import '../fonts.css'
 
 export const TaskContext = createContext();
 
+const themes = {
+    'base': '../../public/assets/base_pumpkin.png',
+    'among_us': '../../public/assets/among_us_pumpkin.png',
+    'cowgirl': '../../public/assets/cowgirl_pumpkin.png',
+    'bunnyhat': '../../public/assets/bunnyhat_pumpkin.png',
+    'female': '../../public/assets/female_pumpkin.png',
+    'sage': '../../public/assets/sage_pumpkin.png',
+    'miku': '../../public/assets/miku_pumpkin.png',
+}
 // should get it from CreateTask
 const tempTaskListData = [
     {
@@ -46,13 +56,22 @@ const tempTaskListData = [
 
 const Home = () => {
     const [taskListData, setTaskListData] = useState(tempTaskListData);
+    const [theme, setTheme] = useState('base');
     return (
         <div className="Home">
+            <h1 className="welcome">Welcome pr0d1gy!</h1>
             <TaskContext.Provider 
                 value={{taskListData, setTaskListData}}
             >
                 <TaskList/>
             </TaskContext.Provider>
+            <div className="Themes">
+
+                <img src={themes[theme]} alt="pumpkin" />
+
+                
+                <h1>Themes</h1>
+            </div>
         </div>
     );
 }

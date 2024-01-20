@@ -4,5 +4,25 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-image: url("../../public/assets/background.jpeg");
+    background-size: cover;
     font-family: "Open Sans", sans-serif;
+}
+.welcome {
+    position: absolute;
+    top: 5dvh;
+    left: 5dvw;
+}
+
+.Themes {
+    position: absolute;
+    bottom: 5dvh;
+    right: 5dvw;
+}
+
+.Themes img {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
 }

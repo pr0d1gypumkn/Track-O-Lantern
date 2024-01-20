@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { TaskContext } from '../pages/Home';
+import { TaskContext } from '../App';
 
 const TaskCard = (props) => {
     const { taskListData, setTaskListData } = useContext(TaskContext);

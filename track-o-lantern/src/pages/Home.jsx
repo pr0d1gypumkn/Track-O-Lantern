@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TaskList from '../components/TaskList';
 import CreateTask from '../components/CreateTask';
@@ -12,8 +12,6 @@ import bunnyhat from '../assets/bunnyhat_pumpkin.png';
 import sage from '../assets/sage_pumpkin.png';
 import miku from '../assets/miku_pumpkin.png';
 import female from '../assets/female_pumpkin.png';
-
-export const TaskContext = createContext();
 
 
 // should get it from CreateTask
@@ -58,7 +56,7 @@ const tempTaskListData = [
 
 
 const Home = () => {
-    const [taskListData, setTaskListData] = useState(tempTaskListData);
+    
 
     const navigate = useNavigate();
     const [theme, setTheme] = useState('base');
@@ -79,12 +77,8 @@ const Home = () => {
             <div className='pageContainer'>
                 <div className="Home">
                     <h1 className="welcome">Welcome pr0d1gy!</h1>
-                    <TaskContext.Provider
-                        value={{ taskListData, setTaskListData }}
-                    >
-                        <TaskList />
-                    </TaskContext.Provider>
-                    
+                    <TaskList />
+
                     <div className="Themes" onClick={goToThemes}>
                         {theme === 'base' ?
                             <img src={base} alt="pumpkin" />

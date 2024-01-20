@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useContext } from 'react';
 import "./TaskList.css";
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { TaskContext } from '../pages/Home';
+import { TaskContext } from '../App';
 import TaskCard from './TaskCard';
 
 const TaskList = () => {

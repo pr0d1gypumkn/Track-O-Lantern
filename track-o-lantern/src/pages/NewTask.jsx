@@ -1,9 +1,11 @@
 import React, { useState, useContext } from 'react';
-import { TaskContext } from '../pages/Home';
+import { TaskContext } from '../App';
+import TaskList from '../components/TaskList';
+import CreateTask from '../components/CreateTask';
 
 
 
-const NewTask = ({ history }) => {
+const NewTask = () => {
     const { taskListData, setTaskListData } = useContext(TaskContext);
 
     const [newTask, setNewTask] = useState({
@@ -24,7 +26,7 @@ const NewTask = ({ history }) => {
     };
 
     const addTask = () => {
-        setTaskListData((prevTaskList) => [...prevTaskList, newTask]);
+        // setTaskListData((prevTaskList) => [...prevTaskList, newTask]);
         // You can also save the task data to a backend server here if needed.
 
         // Redirect back to the Home page after adding the task.
@@ -56,6 +58,7 @@ const NewTask = ({ history }) => {
             </form>
         </div>
     );
+
 };
 
 export default NewTask;

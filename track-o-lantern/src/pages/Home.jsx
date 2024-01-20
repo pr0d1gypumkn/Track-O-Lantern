@@ -1,4 +1,5 @@
 import React, { useState, createContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TaskList from '../components/TaskList';
 import CreateTask from '../components/CreateTask';
 import './Home.css';
@@ -59,13 +60,13 @@ const tempTaskListData = [
 
 const Home = () => {
     const [taskListData, setTaskListData] = useState(tempTaskListData);
-    const [theme, setTheme] = useState('base');
-    // const navigate = useNavigate();
 
+    const navigate = useNavigate();
+    const [theme, setTheme] = useState('base');
     const goToThemes = () => {
-        // navigate(`/create`, {
-        //     state: {}
-        // });
+        navigate(`/themes`, {
+             state: {}
+         });
     }
     return (
         <div className='background'>
@@ -76,7 +77,10 @@ const Home = () => {
                         value={{ taskListData, setTaskListData }}
                     >
                         <TaskList />
+                       {/* Temporary button for testing */}
+                  <button onClick={navigate('/new-task',{})}>Test NewTask Page</button>
                     </TaskContext.Provider>
+                    
                     <div className="Themes" onClick={goToThemes}>
                         {theme === 'base' ?
                             <img src={base} alt="pumpkin" />
@@ -105,8 +109,9 @@ const Home = () => {
             </div>
 
 
+
         </div>
     );
-}
+};
 
 export default Home;

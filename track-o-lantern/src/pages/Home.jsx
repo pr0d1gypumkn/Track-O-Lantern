@@ -1,4 +1,5 @@
 import React, { useState, createContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TaskList from '../components/TaskList';
 import './Home.css';
 
@@ -46,15 +47,18 @@ const tempTaskListData = [
 
 const Home = () => {
     const [taskListData, setTaskListData] = useState(tempTaskListData);
+    const navigate = useNavigate();
+
     return (
         <div className="Home">
-            <TaskContext.Provider 
-                value={{taskListData, setTaskListData}}
-            >
-                <TaskList/>
+            <TaskContext.Provider value={{ taskListData, setTaskListData }}>
+                <TaskList />
+                
+                {/* Temporary button for testing */}
+                <button onClick={navigate('/new-task',{})}>Test NewTask Page</button>
             </TaskContext.Provider>
         </div>
     );
-}
+};
 
 export default Home;

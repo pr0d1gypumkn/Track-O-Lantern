@@ -1,0 +1,15 @@
+button {
+    display: block;
+    background-image: url('../../public/assets/seed.png');
+    background-size: 100%;
+    width: 150px;
+    height: 150px;
+    align-self: center;
+    margin-top: 25px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    padding-top: 110px;
+    text-align: center;
+}

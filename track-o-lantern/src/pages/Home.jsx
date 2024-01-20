@@ -1,5 +1,6 @@
 import React, { useState, createContext } from 'react';
 import TaskList from '../components/TaskList';
+import CreateTask from '../components/CreateTask';
 import './Home.css';
 
 export const TaskContext = createContext();
@@ -47,12 +48,18 @@ const tempTaskListData = [
 const Home = () => {
     const [taskListData, setTaskListData] = useState(tempTaskListData);
     return (
-        <div className="Home">
-            <TaskContext.Provider 
-                value={{taskListData, setTaskListData}}
-            >
-                <TaskList/>
-            </TaskContext.Provider>
+        <div className='background'>
+            <div className='pageContainer'>
+                <div className="Home">
+                    <TaskContext.Provider
+                        value={{ taskListData, setTaskListData }}
+
+                    >
+                        <TaskList />
+                    </TaskContext.Provider>
+                </div>
+                <CreateTask />
+            </div>
         </div>
     );
 }

@@ -2,18 +2,19 @@ import React, { useState, createContext } from 'react';
 import TaskList from '../components/TaskList';
 import './Home.css';
 import '../fonts.css'
+import { useNavigate } from "react-router-dom";
+
+import base from '../assets/base_pumpkin.png';
+import among_us from '../assets/among_us_pumpkin.png';
+import cowgirl from '../assets/cowgirl_pumpkin.png';
+import bunnyhat from '../assets/bunnyhat_pumpkin.png';
+import sage from '../assets/sage_pumpkin.png';
+import miku from '../assets/miku_pumpkin.png';
+import female from '../assets/female_pumpkin.png';
 
 export const TaskContext = createContext();
 
-const themes = {
-    'base': '../../public/assets/base_pumpkin.png',
-    'among_us': '../../public/assets/among_us_pumpkin.png',
-    'cowgirl': '../../public/assets/cowgirl_pumpkin.png',
-    'bunnyhat': '../../public/assets/bunnyhat_pumpkin.png',
-    'female': '../../public/assets/female_pumpkin.png',
-    'sage': '../../public/assets/sage_pumpkin.png',
-    'miku': '../../public/assets/miku_pumpkin.png',
-}
+
 // should get it from CreateTask
 const tempTaskListData = [
     {
@@ -54,9 +55,17 @@ const tempTaskListData = [
     },
 ]
 
+
 const Home = () => {
     const [taskListData, setTaskListData] = useState(tempTaskListData);
     const [theme, setTheme] = useState('base');
+    // const navigate = useNavigate();
+
+    const goToThemes = () => {
+        // navigate(`/create`, {
+        //     state: {}
+        // });
+    }
     return (
         <div className="Home">
             <h1 className="welcome">Welcome pr0d1gy!</h1>
@@ -65,9 +74,25 @@ const Home = () => {
             >
                 <TaskList/>
             </TaskContext.Provider>
-            <div className="Themes">
+            <div className="Themes" onClick={goToThemes}>
+                { theme === 'base' ? 
+                    <img src={base} alt="pumpkin"/>
+                    : theme === 'among_us' ?
+                    <img src={among_us} alt="pumpkin"/>
+                    : theme === 'cowgirl' ?
+                    <img src={cowgirl} alt="pumpkin"/>
+                    : theme === 'bunnyhat' ?
+                    <img src={bunnyhat} alt="pumpkin"/>
+                    : theme === 'sage' ?
+                    <img src={sage} alt="pumpkin"/>
+                    : theme === 'miku' ?
+                    <img src={miku} alt="pumpkin"/>
+                    : <img src={female} alt="pumpkin"/>
+                }
+                
+                
 
-                <img src={themes[theme]} alt="pumpkin" />
+                
 
                 
                 <h1>Themes</h1>

@@ -1,0 +1,75 @@
+.theme-image {
+    max-height: 10dvh;
+    display: flex;
+}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.Home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    margin-top: 25vh;
+    font-family: "Open Sans", sans-serif;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+    height: 100vh;
+    width: 100vw;
+    min-height: 40dvh;
+    padding-bottom: 20dvh;
+
+}
+
+.background {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/background.jpeg');
+    background-size: cover;
+    z-index: -1;
+
+    height: 100vh;
+    background-image: url("../assets/background.jpeg");
+    background-size: cover;
+    font-family: "Open Sans", sans-serif;
+}
+
+.welcome {
+    position: absolute;
+    top: 5dvh;
+    left: 5dvw;
+}
+
+.Themes {
+    position: absolute;
+    bottom: 5dvh;
+    right: 5dvw;
+    align-items: center;
+
+}
+
+.Themes img {
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.Themes h1 {
+    position: relative;
+    top: -30px;
+    color: #000;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+

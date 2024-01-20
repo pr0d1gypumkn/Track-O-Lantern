@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TaskList from '../components/TaskList';
 import CreateTask from '../components/CreateTask';
 import './Home.css';
 import '../fonts.css'
+import { useLocation } from 'react-router-dom';
 
 import base from '../assets/base_pumpkin.png';
 import among_us from '../assets/among_us_pumpkin.png';
@@ -57,15 +58,21 @@ const tempTaskListData = [
 
 const Home = () => {
     
+    const location = useLocation();
 
     const navigate = useNavigate();
     const [theme, setTheme] = useState('base');
+    const functionX = (newValue) => {
+        setTheme(newValue);
+    }
     const goToThemes = () => {
         navigate(`/themes`, {
-             state: {}
+             state: {theme: theme,
+                        // setTheme: functionX,
+                    }
          });
     }
-
+    
     const newTask = () => {
         navigate(`/new-task`, {
             state: {}

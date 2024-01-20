@@ -10,7 +10,7 @@ const CreateTask = () => {
             {state: {title: '', description: '', deadline: '', priority: 'low', completed: false, createdAt: new Date().toISOString().slice(0, 10)}});
     }
     return (
-        <button type="button" onClick={addTask}>Plant New Seed</button>
+        <button type="button" className="new-seed" onClick={addTask}>Plant New Seed</button>
     )
 }
 

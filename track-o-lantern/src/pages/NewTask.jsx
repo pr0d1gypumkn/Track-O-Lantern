@@ -26,7 +26,7 @@ const NewTask = () => {
     };
 
     const addTask = () => {
-        // setTaskListData((prevTaskList) => [...prevTaskList, newTask]);
+        setTaskListData((prevTaskList) => [...prevTaskList, newTask]);
         // You can also save the task data to a backend server here if needed.
 
         // Redirect back to the Home page after adding the task.

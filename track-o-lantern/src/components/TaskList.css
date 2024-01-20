@@ -7,7 +7,7 @@
     margin: 0;
     padding-right: 10px;
 }
-  
+
 .slide {
     margin: 0;
     transform: scale(0.6);
@@ -17,7 +17,7 @@
     border-radius: 20px;
     padding: 30px;
     min-height: 250px;
-    background-color: rgba(235, 225, 196, 0.6);
+    background-color: rgba(235, 225, 196, 0.88);
 }
 
 .activeSlide {
@@ -75,7 +75,7 @@
     max-width: 80%;
 }
 
-.cardDetails > div {
+.cardDetails>div {
     font-size: 1.1em;
     margin-bottom: 5px;
 }
